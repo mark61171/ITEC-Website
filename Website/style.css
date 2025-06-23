@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Suez+One&display=swap');
+
+.desktop {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.desktop .div {
+  background-color: #ffffff;
+  overflow: hidden;
+  width: 1440px;
+  height: 4764px;
+  position: relative;
+}
+
+.desktop .overlap-group {
+  width: 1440px;
+  height: 4253px;
+  top: 0;
+  position: absolute;
+  left: 0;
+}
+
+.desktop .nathan-dumlao-cb {
+  position: absolute;
+  width: 1440px;
+  height: 1115px;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.desktop .rectangle {
+  width: 1440px;
+  height: 3164px;
+  top: 1089px;
+  background-color: #fbe7d9;
+  position: absolute;
+  left: 0;
+}
+
+.desktop .olena-bohovyk {
+  position: absolute;
+  width: 567px;
+  height: 890px;
+  top: 3363px;
+  left: 873px;
+}
+
+.desktop .romboide {
+  position: absolute;
+  width: 893px;
+  height: 1165px;
+  top: 3088px;
+  left: 0;
+  object-fit: cover;
+}
+
+.desktop .jeremy-yap-jn {
+  position: absolute;
+  width: 547px;
+  height: 514px;
+  top: 2574px;
+  left: 893px;
+}
+
+.desktop .wojciech-paczes {
+  position: absolute;
+  width: 1440px;
+  height: 351px;
+  top: 2223px;
+  left: 0;
+}
+
+.desktop .image {
+  position: absolute;
+  width: 263px;
+  height: 285px;
+  top: 1881px;
+  left: 941px;
+  object-fit: cover;
+}
+
+.desktop .about-mr-beans {
+  position: absolute;
+  width: 567px;
+  top: 1186px;
+  left: 59px;
+  font-family: "Suez One", serif;
+  font-weight: 400;
+  color: #2c2c2c;
+  font-size: 120px;
+  letter-spacing: 0;
+  line-height: 108.0px;
+}
+
+.desktop .text-wrapper {
+  position: absolute;
+  width: 517px;
+  top: 2630px;
+  left: 84px;
+  font-family: "Suez One", serif;
+  font-weight: 400;
+  color: #2c2c2c;
+  font-size: 120px;
+  letter-spacing: 0;
+  line-height: 108.0px;
+}
+
+.desktop .text-wrapper-2 {
+  position: absolute;
+  width: 517px;
+  top: 2869px;
+  left: 84px;
+  font-family: "Suez One", serif;
+  font-weight: 400;
+  color: #2c2c2c;
+  font-size: 60px;
+  letter-spacing: 0;
+  line-height: 54.0px;
+}
+
+.desktop .text-wrapper-3 {
+  position: absolute;
+  width: 517px;
+  top: 3144px;
+  left: 916px;
+  font-family: "Suez One", serif;
+  font-weight: 400;
+  color: #2c2c2c;
+  font-size: 60px;
+  letter-spacing: 0;
+  line-height: 54.0px;
+}
+
+.desktop .explore-our-coffee {
+  position: absolute;
+  width: 810px;
+  top: 1929px;
+  left: 234px;
+  font-family: "Suez One", serif;
+  font-weight: 400;
+  color: #2c2c2c;
+  font-size: 120px;
+  letter-spacing: 0;
+  line-height: 108.0px;
+}
+
+.desktop .welcome-to-beanbliss {
+  position: absolute;
+  width: 750px;
+  top: 1202px;
+  left: 670px;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  color: #111111;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.desktop .p {
+  width: 750px;
+  top: 2754px;
+  left: 84px;
+  position: absolute;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  color: #111111;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.desktop .a-bold-ene-intense {
+  position: absolute;
+  width: 688px;
+  top: 2942px;
+  left: 84px;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  color: #111111;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.desktop .text-wrapper-4 {
+  width: 498px;
+  top: 3217px;
+  left: 916px;
+  position: absolute;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  color: #111111;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.desktop .nafinia-putra-kwdp {
+  position: absolute;
+  width: 1440px;
+  height: 369px;
+  top: 1479px;
+  left: 0;
+}
+
+.desktop .mr-beans-caite {
+  position: absolute;
+  width: 1077px;
+  top: 259px;
+  left: 207px;
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 200px;
+  letter-spacing: 0;
+  line-height: 200px;
+}
+
+.desktop .text-wrapper-5 {
+  position: absolute;
+  width: 241px;
+  top: 59px;
+  left: 185px;
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 45px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.desktop .text-wrapper-6 {
+  position: absolute;
+  width: 142px;
+  top: 59px;
+  left: 571px;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 45px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.desktop .DISCOVER-THE-PERFECT {
+  position: absolute;
+  width: 627px;
+  top: 799px;
+  left: 399px;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.desktop .text-wrapper-7 {
+  width: 278px;
+  top: 59px;
+  left: 1006px;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-size: 45px;
+  position: absolute;
+  color: #ffffff;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.desktop .text-wrapper-8 {
+  position: absolute;
+  width: 225px;
+  top: 59px;
+  left: 747px;
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  color: #ffffff;
+  font-size: 45px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.desktop .img {
+  position: absolute;
+  width: 114px;
+  height: 123px;
+  top: 38px;
+  left: 56px;
+  object-fit: cover;
+}
+
+.desktop .overlap {
+  width: 1463px;
+  height: 511px;
+  top: 4253px;
+  position: absolute;
+  left: 0;
+}
+
+.desktop .rectangle-2 {
+  width: 1446px;
+  height: 511px;
+  top: 0;
+  background-color: #2d2b2a;
+  position: absolute;
+  left: 0;
+}
+
+.desktop .text-wrapper-9 {
+  position: absolute;
+  width: 1003px;
+  top: 81px;
+  left: 41px;
+  font-family: "Suez One", serif;
+  font-weight: 400;
+  color: #e2e2e2;
+  font-size: 120px;
+  letter-spacing: 0;
+  line-height: 108.0px;
+}
+
+.desktop .got-a-question {
+  position: absolute;
+  width: 742px;
+  top: 239px;
+  left: 41px;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+}
+
+.desktop .contact-information {
+  width: 646px;
+  top: 313px;
+  left: 817px;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 24px;
+  position: absolute;
+  color: #ffffff;
+  letter-spacing: 0;
+  line-height: normal;
+}
