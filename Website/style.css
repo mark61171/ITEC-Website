@@ -77,14 +77,6 @@
   left: 0;
 }
 
-/* --- Removed CSS for old navigation elements that are no longer in the HTML body --- */
-/* .desktop .image { ... } */
-/* .desktop .text-wrapper-5 { ... } */
-/* .desktop .text-wrapper-6 { ... } */
-/* .desktop .text-wrapper-7 { ... } */
-/* .desktop .text-wrapper-8 { ... } */
-/* .desktop .img { ... } */
-
 .desktop .about-mr-beans {
   position: absolute;
   width: 567px;

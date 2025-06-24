@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mr Beans Café - Menu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Suez+One&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap">
+    <style>
+      /* --- Global HTML/Body Styles (copied from index.html context/implied setup) --- */
+      html {
+        scroll-behavior: smooth; /* Enables smooth scrolling for #links */
+        scroll-padding-top: 100px; /* Added: Space for fixed navbar when scrolling to an ID */
+      }
+
+      body {
+        margin: 0;
+        font-family: 'Open Sans', sans-serif; /* Default font for the body, assuming from Roboto/Open Sans link */
+        background-color: #8b4513; /* Light background for the whole page (common background) */
+        color: #333; /* Default text color (common) */
+        padding-top: 60px; /* Crucial for fixed navbar to not hide content */
+      }
+
+      /* --- NAVBAR STYLES (Copied EXACTLY from index.html's <style> block) --- */
+      .navbar {
+        position: fixed; /* Makes the navbar stick to the top */
+        top: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.6); /* Black with 60% transparency */
+        display: flex; /* Uses flexbox for alignment */
+        align-items: center; /* Vertically center items */
+        padding: 10px 20px; /* Padding inside the navbar */
+        z-index: 1000; /* Ensures navbar is on top of other content */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+        backdrop-filter: blur(5px); /* Glassy effect */
+      }
+
+      .navbar .nav-links {
+        display: flex;
+        gap: 30px; /* Space between Home, About Us, Contact links */
+        margin-right: auto; /* Pushes the nav links to the left, logo section to the right */
+        margin-left: 20px; /* Exact: small space from left edge as in index.html */
+      }
+
+      .navbar .logo-section {
+        display: flex;
+        align-items: center;
+        gap: 10px; /* Space between logo image and "Mr Beans" text */
+      }
+
+      .navbar a {
+        padding: 8px 16px; /* Padding for nav links */
+        text-decoration: none;
+        font-size: 16px; /* Adjust font size as needed */
+        color: white;
+        background-color: transparent;
+        transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover */
+        border-radius: 5px;
+        font-family: 'Times New Roman', Times, serif; /* Applied Times New Roman to navbar links */
+      }
+
+      .navbar a:hover {
+        background-color: #8B4513; /* Brown hover background */
+        color: white;
+      }
+
+      .navbar .logo-img {
+        width: 40px; /* Adjust logo size in navbar */
+        height: 40px;
+        object-fit: cover;
+      }
+
+      .navbar .logo-text {
+        font-family: "Pacifico", cursive; /* Uses Pacifico font */
+        font-weight: 400;
+        color: #ffffff;
+        font-size: 24px; /* Adjust font size for navbar */
+        line-height: normal;
+        margin-right: 60px; /* Space from the right edge */
+      }
+
+      /* --- Menu Page Specific Styles (from your original menu.html) --- */
+      .menu-container {
+        display: flex;
+        flex-wrap: wrap; /* Allows sections to wrap on smaller screens */
+        justify-content: center;
+        max-width: 1200px; /* Max width for the menu content */
+        margin: 40px auto; /* Margin for centering, adjusted from original to account for padding-top on body */
+        padding: 20px;
+        background-color: #fff; /* White background for the menu block */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+        border-radius: 10px; /* Rounded corners */
+      }
+
+      .menu-section {
+        flex: 1 1 50%; /* Each section takes about half width, can shrink/grow */
+        padding: 20px;
+        box-sizing: border-box; /* Include padding in element's total width and height */
+      }
+
+      @media (max-width: 768px) {
+        .menu-section {
+          flex: 1 1 100%; /* Full width on smaller screens */
+        }
+      }
+
+      .menu-image-section {
+        background-image: url(/Website/pics/cafe\ bg.jpg); /* Light brown background */
+        background-size: cover; /* Cover the entire area */
+        background-position: center; /* Center the image */
+        border-radius: 8px;
+        overflow: hidden; /* Ensures image corners match div */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px; /* Padding inside the image section */
+        text-align: center;
+      }
+
+      .menu-image-section img {
+        width: 100%;
+        max-width: 400px; /* Limit image size within its container */
+        height: 400px;
+        border-radius: 8px;
+        margin-bottom: 60px; /* Consistent margin below each image */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      /* Remove specific margin-top for the second image, as margin-bottom will handle spacing */
+      .menu-image-section img:last-of-type {
+        margin-bottom: 0; /* No margin below the very last image in the section */
+      }
+
+
+      .coffee-break-logo {
+        color: #fff;
+        font-family: 'Pacifico', cursive; /* Matching the navbar logo font */
+        font-size: 48px;
+        line-height: 1.2;
+        margin-bottom: 10px;
+      }
+
+      .coffee-house-text {
+        color: #fff;
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        text-shadow: #333 1px 1px 2px; /* Subtle shadow for better readability */
+        margin-bottom: 20px; /* Space below the coffee house text */
+      }
+
+      .menu-category {
+        background-color: #8b4513; /* Darker brown for category headers */
+        color: white;
+        font-family: 'Suez One', serif; /* A bolder, decorative font for categories */
+        font-size: 28px;
+        padding: 15px 20px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        text-align: center;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .menu-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .menu-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end; /* Align price to bottom if description is longer */
+        padding: 15px 0;
+        border-bottom: 1px dashed #ddd; /* Dashed line separator */
+      }
+
+      .menu-item:last-child {
+        border-bottom: none; /* No border for the last item in a category */
+      }
+
+      .item-details {
+        flex-grow: 1; /* Allows details to take available space */
+        margin-right: 15px;
+      }
+
+      .item-name {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        font-size: 20px;
+        margin-bottom: 5px;
+        color: #555;
+      }
+
+      .item-description {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
+        color: #777;
+        margin-top: 5px; /* Added margin for spacing */
+      }
+
+      .item-price {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        font-size: 22px;
+        color: #8B4513; /* Brown color for prices */
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="nav-links">
+        <a href="index.html#home">HOME</a>
+        <a href="about.html">ABOUT US</a>
+        <a href="menu.html">MENU</a>
+        <a href="contact.html">CONTACT US</a>
+      </div>
+      <div class="logo-section">
+        <img class="logo-img" src="pics/image1.png" alt="Mr Beans Logo" />
+        <div class="logo-text">Mr Beans</div>
+      </div>
+    </nav>
+
+    <div class="menu-container">
+      <div class="menu-section menu-image-section">
+        <div class="coffee-break-logo">Mr Beans</div>
+        <div class="coffee-house-text">Coffee House</div>
+        <img src="/Website/pics/a-cup-of-black-coffee-with-coffee-beans.jpg" alt="Coffee Break Image 1" />
+        <img src="/Website/pics/iced-caramel-macchiato-new-2.jpg" alt="Coffee Break Image 2" />
+        <img src="/Website/pics/peppermint-tea-on-teacup-1417945-1200x826.jpg" alt="Menu Image 3" />
+        <img src="/Website/pics/1200x900px_Butter-Croissant-sandwich-1.png" alt="Menu Image 4" />
+      </div>
+
+      <div class="menu-section">
+        <div class="menu-category">Espresso Shot</div>
+        <ul class="menu-list">
+          <li class="menu-item">
+            <div class="item-details">
+              <div class="item-name">Americano</div>
+              <div class="item-description">A classic, rich espresso with hot water.</div>
+            </div>
+            <div class="item-price">PHP 140</div>
+          </li>
+          <li class="menu-item">
+            <div class="item-details">
+              <div class="item-name">Latte</div>
+              <div class="item-description">Smooth espresso with steamed milk and a thin layer of foam.</div>
+            </div>
+            <div class="item-price">PHP 160</div>
+          </li>
+          <li class="menu-item">
+            <div class="item-details">
+              <div class="item-name">Mocha</div>
+              <div class="item-description">Espresso mixed with chocolate syrup and steamed milk.</div>
+            </div>
+            <div class="item-price">PHP 170</div>
+          </li>
+          <li class="menu-item">
+            <div class="item-details">
+              <div class="item-name">White Mocha</div>
+              <div class="item-description">Rich espresso combined with white chocolate and steamed milk.</div>
+            </div>
+            <div class="item-price">PHP 175</div>
+          </li>
+        </ul>
+
+        <div class="menu-category" style="margin-top: 40px;">Cold Brew</div>
+        <ul class="menu-list">
+          <li class="menu-item">
+            <div class="item-details">
+              <div class="item-name">Coffee Jelly</div>
+              <div class="item-description">Refreshing cold brew with coffee-flavored jelly cubes.</div>
+            </div>
+            <div class="item-price">PHP 180</div>
+          </li>
+          <li class="menu-item">
+            <div class="item-details">
+              <div class="item-name">Caramel</div>
+              <div class="item-description">Smooth cold brew infused with sweet caramel notes.</div>
+            </div>
+            <div class="item-price">PHP 180</div>
+          </li>
+          <li class="menu-item">
+            <div class="item-details">
+              <div class="item-name">Mint Chocolate</div>
+              <div class="item-description">Cooling mint and rich chocolate blended with cold brew.</div>
+            </div>
+            <div class="item-price">PHP 195</div>
+          </li>
+          <li class="menu-item">
+            <div class="item-details">
+              <div class="item-name">Cookies</div>
+              <div class="item-description">Creamy cold brew with cookie crumbles.</div>
+            </div>
+            <div class="item-price">PHP 195</div>
+          </li>
+        </ul>
+
+        <div class="menu-category" style="margin-top: 40px;">Tea</div>
+        <ul class="menu-list">
+          <li class="menu-item">
+            <div class="item-details">
+              <div class="item-name">Green Tea</div>
+              <div class="item-description">Classic Japanese green tea, hot or iced.</div>
+            </div>
+            <div class="item-price">PHP 130</div>
+          </li>
+          <li class="menu-item">
+            <div class="item-details">
+              <div class="item-name">Red Tea</div>
+              <div class="item-description">Robust and invigorating black tea.</div>
+            </div>
+            <div class="item-price">PHP 130</div>
+          </li>
+          <li class="menu-item">
+            <div class="item-details">
+              <div class="item-name">Jasmine Tea</div>
+              <div class="item-description">Fragrant green tea scented with jasmine blossoms.</div>
+            </div>
+            <div class="item-price">PHP 135</div>
+          </li>
+          <li class="menu-item">
+            <div class="item-details">
+              <div class="item-name">Earl Grey</div>
+              <div class="item-description">Black tea flavored with oil of bergamot.</div>
+            </div>
+            <div class="item-price">PHP 135</div>
+          </li>
+        </ul>
+
+        <div class="menu-category" style="margin-top: 40px;">Pastries</div>
+        <ul class="menu-list">
+          <li class="menu-item">
+            <div class="item-details">
+              <div class="item-name">Croissant</div>
+              <div class="item-description">Flaky, buttery pastry, perfect with coffee.</div>
+            </div>
+            <div class="item-price">PHP 100</div>
+          </li>
+          <li class="menu-item">
+            <div class="item-details">
+              <div class="item-name">Blueberry Muffin</div>
+              <div class="item-description">Moist muffin bursting with fresh blueberries.</div>
+            </div>
+            <div class="item-price">PHP 120</div>
+          </li>
+          <li class="menu-item">
+            <div class="item-details">
+              <div class="item-name">Cinnamon Roll</div>
+              <div class="item-description">Soft, sweet roll with a swirl of cinnamon and cream cheese frosting.</div>
+            </div>
+            <div class="item-price">PHP 130</div>
+          </li>
+        </ul>
+
+        <div class="menu-category" style="margin-top: 40px;">Sandwiches</div>
+        <ul class="menu-list">
+          <li class="menu-item">
+            <div class="item-details">
+              <div class="item-name">Clubhouse Sandwich</div>
+              <div class="item-description">Triple-layered delight with chicken, bacon, lettuce, and tomato.</div>
+            </div>
+            <div class="item-price">PHP 250</div>
+          </li>
+          <li class="menu-item">
+            <div class="item-details">
+              <div class="item-name">Tuna Melt</div>
+              <div class="item-description">Toasted sandwich with creamy tuna salad and melted cheese.</div>
+            </div>
+            <div class="item-price">PHP 220</div>
+          </li>
+          <li class="menu-item">
+            <div class="item-details">
+              <div class="item-name">Grilled Cheese</div>
+              <div class="item-description">Classic comfort with gooey melted cheese on toasted bread.</div>
+            </div>
+            <div class="item-price">PHP 180</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mr Beans Café - About Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Suez+One&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap">
+    <style>
+      /* --- Global HTML/Body Styles (from previous files) --- */
+      html {
+        scroll-behavior: smooth; /* Enables smooth scrolling for #links */
+        scroll-padding-top: 100px; /* Space for fixed navbar when scrolling to an ID */
+      }
+
+      body {
+        margin: 0;
+        font-family: 'Open Sans', sans-serif; /* Default font for the body */
+        background-color: #8B4513; /* Light background for the whole page, matching typical website backgrounds */
+        color: #333; /* Default text color */
+        padding-top: 60px; /* Crucial for fixed navbar to not hide content */
+      }
+
+      /* --- NAVBAR STYLES (Copied EXACTLY from menu.html) --- */
+      .navbar {
+        position: fixed; /* Makes the navbar stick to the top */
+        top: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.6); /* Black with 60% transparency */
+        display: flex; /* Uses flexbox for alignment */
+        align-items: center; /* Vertically center items */
+        padding: 10px 20px; /* Padding inside the navbar */
+        z-index: 1000; /* Ensures navbar is on top of other content */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+        backdrop-filter: blur(5px); /* Glassy effect */
+      }
+
+      .navbar .nav-links {
+        display: flex;
+        gap: 30px; /* Space between Home, About Us, Contact links */
+        margin-right: auto; /* Pushes the nav links to the left, logo section to the right */
+        margin-left: 20px; /* Small space from left edge */
+      }
+
+      .navbar .logo-section {
+        display: flex;
+        align-items: center;
+        gap: 10px; /* Space between logo image and "Mr Beans" text */
+      }
+
+      .navbar a {
+        padding: 8px 16px; /* Padding for nav links */
+        text-decoration: none;
+        font-size: 16px; /* Adjust font size as needed */
+        color: white;
+        background-color: transparent;
+        transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover */
+        border-radius: 5px;
+        font-family: 'Times New Roman', Times, serif; /* Navbar font */
+      }
+
+      .navbar a:hover {
+        background-color: #8B4513; /* Brown hover background */
+        color: white;
+      }
+
+      .navbar .logo-img {
+        width: 40px; /* Adjust logo size in navbar */
+        height: 40px;
+        object-fit: cover;
+      }
+
+      .navbar .logo-text {
+        font-family: "Pacifico", cursive; /* Uses Pacifico font */
+        font-weight: 400;
+        color: #ffffff;
+        font-size: 24px; /* Adjust font size for navbar */
+        line-height: normal;
+        margin-right: 60px; /* Space from the right edge */
+      }
+
+      /* --- About Page Specific Styles (inspired by Screenshot-2023-04-07-220755.jpg) --- */
+      .about-container {
+        display: flex;
+        flex-wrap: wrap; /* Allows sections to wrap on smaller screens */
+        justify-content: center;
+        align-items: center; /* Vertically center content sections */
+        max-width: 1200px;
+        margin: 60px auto 40px auto; /* Adjust top margin for spacing below navbar */
+        padding: 40px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        gap: 40px; /* Space between text and image sections */
+      }
+
+      .about-text-content {
+        flex: 1; /* Allows text content to grow */
+        min-width: 300px; /* Minimum width before wrapping */
+        max-width: 550px; /* Limit text content width */
+        padding-right: 20px; /* Spacing from image section */
+      }
+
+      .about-text-content h3 {
+        font-family: 'Open Sans', sans-serif; /* Or a similar sans-serif font */
+        color: #B58752; /* Orange-brown color from screenshot */
+        font-size: 16px;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        margin-bottom: 10px;
+      }
+
+      .about-text-content h1 {
+        font-family: 'Roboto', sans-serif; /* Or a strong sans-serif font */
+        font-weight: 700;
+        font-size: 42px;
+        line-height: 1.2;
+        color: #333; /* Dark color for main heading */
+        margin-bottom: 20px;
+      }
+
+      .about-text-content p {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 16px;
+        line-height: 1.6;
+        color: #555;
+        margin-bottom: 30px;
+      }
+
+      .discover-button {
+        display: inline-block;
+        padding: 12px 25px;
+        background-color: #b85713; /* Orange color from screenshot */
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-family: 'Roboto', sans-serif; /* Or a sans-serif font */
+        font-size: 16px;
+        font-weight: 700;
+        transition: background-color 0.3s ease;
+        border: none; /* Remove default button border */
+        cursor: pointer; /* Indicate it's clickable */
+      }
+
+      .discover-button:hover {
+        background-color: #8B4513; /* Slightly darker orange on hover */
+      }
+
+      .about-image-content {
+        flex: 1; /* Allows image content to grow */
+        min-width: 300px; /* Minimum width before wrapping */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative; /* For absolute positioning of circular elements */
+        padding-left: 20px; /* Spacing from text section */
+      }
+
+      .image-wrapper {
+        position: relative;
+        width: 100%; /* Take full width of its flex parent */
+        max-width: 500px; /* Control max size of the image area */
+        display: flex; /* Use flex to arrange images */
+        flex-direction: column; /* Stack images vertically */
+        align-items: center; /* Center images horizontally */
+        gap: 20px; /* Space between images */
+      }
+
+      .about-image-content .circular-img {
+        width: 300px; /* Base size for circular images */
+        height: 300px;
+        border-radius: 50%;
+        object-fit: cover; /* Ensures image covers the circle without distortion */
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+      }
+
+      /* Specific adjustments for screenshot layout */
+      .about-image-content img:first-of-type {
+        margin-top: -50px; /* Pull main image up slightly to overlap wrapper */
+        margin-left: 50px; /* Shift main image right */
+        z-index: 2; /* Ensure it's above other elements if needed */
+      }
+
+      .about-image-content img:last-of-type {
+        width: 200px; /* Smaller size for the second circular image */
+        height: 200px;
+        align-self: flex-start; /* Align to the start (left) */
+        margin-top: -100px; /* Pull secondary image up to overlap main image */
+        margin-left: -50px; /* Shift secondary image left */
+        z-index: 3; /* Ensure it's on top */
+      }
+
+      .experience-circle {
+        position: absolute;
+        top: 0; /* Adjust as needed */
+        right: 0; /* Adjust as needed */
+        width: 150px; /* Size of the green circle */
+        height: 150px;
+        background-color: #d4e4ed; /* Light green from screenshot */
+        border-radius: 50%;
+        display: flex; /* Use flexbox to center the image */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        text-align: center;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        z-index: 4; /* Ensure it's on top */
+        transform: translate(20%, -20%); /* Adjust positioning relative to its parent for screenshot look */
+      }
+      
+      .experience-circle img { /* Style for the image inside the circle */
+        max-width: 80%; /* Ensure image fits within the circle */
+        max-height: 80%;
+        object-fit: contain; /* Contain the image within the element */
+        border-radius: 50%; /* Keep it circular if the image is square */
+      }
+
+      /* Media Queries for Responsiveness */
+      @media (max-width: 992px) {
+        .about-container {
+          flex-direction: column; /* Stack sections vertically */
+          gap: 20px;
+          padding: 20px;
+          margin-top: 40px; /* Reduce top margin on smaller screens */
+        }
+
+        .about-text-content, .about-image-content {
+          padding-right: 0;
+          padding-left: 0;
+          max-width: 100%; /* Allow full width */
+        }
+
+        .about-image-content .circular-img {
+          width: 250px; /* Adjust size for smaller screens */
+          height: 250px;
+        }
+
+        .about-image-content img:first-of-type {
+            margin-top: 0; /* Reset margins */
+            margin-left: 0;
+        }
+
+        .about-image-content img:last-of-type {
+            margin-top: -80px; /* Keep some overlap */
+            margin-left: -80px;
+        }
+
+        .experience-circle {
+            transform: translate(10%, -10%); /* Adjust position for smaller screens */
+            width: 120px;
+            height: 120px;
+        }
+
+        .experience-circle img {
+            max-width: 70%;
+            max-height: 70%;
+        }
+
+        .about-text-content h1 {
+            font-size: 32px;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .about-container {
+          padding: 15px;
+        }
+
+        .about-text-content h1 {
+          font-size: 28px;
+        }
+
+        .about-image-content .circular-img {
+          width: 200px;
+          height: 200px;
+        }
+
+        .about-image-content img:last-of-type {
+            width: 150px;
+            height: 150px;
+            margin-top: -60px;
+            margin-left: -60px;
+        }
+
+        .experience-circle {
+            width: 100px;
+            height: 100px;
+            transform: translate(0, 0); /* Center on image or simpler position */
+        }
+         .experience-circle img {
+            max-width: 60%;
+            max-height: 60%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="nav-links">
+        <a href="index.html#home">HOME</a>
+        <a href="about.html">ABOUT US</a>
+        <a href="menu.html">MENU</a>
+        <a href="contact.html">CONTACT US</a>
+      </div>
+      <div class="logo-section">
+        <img class="logo-img" src="pics/image1.png" alt="Mr Beans Logo" />
+        <div class="logo-text">Mr Beans</div>
+      </div>
+    </nav>
+
+    <div class="about-container">
+      <div class="about-text-content">
+        <h3>ABOUT US</h3>
+        <h1>The traditional coffee shop</h1>
+        <p>
+          Established in [Year, e.g., 2000], Mr Beans Café began with a simple passion: to brew exceptional coffee and create a welcoming space for our community. Our mission is to enrich lives, one cup at a time, by serving ethically sourced, high-quality coffee and delightful pastries in an atmosphere that feels like home. We value authenticity, community, and the artistry of coffee-making. Our commitment to quality is unwavering, from carefully selecting the finest beans and fresh ingredients to ensuring every beverage and treat meets our high standards. We believe in crafting memorable experiences with every visit, fostering connections, and consistently delivering excellence in taste and service.
+        </p>
+        <button class="discover-button">Discover more</button>
+      </div>
+
+      <div class="about-image-content">
+        <div class="image-wrapper">
+            <img class="circular-img" src="/Website/pics/cafeImg2.jpg" alt="Main Coffee Shop Image" />
+            <img class="circular-img" src="/Website/pics/coffee1.jpg" alt="Secondary Coffee Cup Image" />
+            <div class="experience-circle">
+                <img src="/Website/pics/chocolate-pastry-puffs-5-2.jpg" alt="Experience Icon" />
+            </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
