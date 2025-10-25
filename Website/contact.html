@@ -8,8 +8,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Suez+One&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap">
-    <!-- Font Awesome CDN for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" xintegrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
       /* --- Global HTML/Body Styles (copied from index.html/menu.html context) --- */
       html {
@@ -157,7 +156,8 @@
 
       .contact-details div {
         display: flex;
-        align-items: flex-start;
+        /* Changed alignment for better visual appearance */
+        align-items: center; /* Aligns items to the center of the cross-axis */
         margin-bottom: 15px;
       }
 
@@ -165,7 +165,12 @@
         color: #8B4513;
         font-size: 20px;
         margin-right: 10px;
-        margin-top: 2px;
+        /* Adjusted margin-top for potentially better vertical alignment with text center */
+        margin-top: 0px; /* Set to 0 or remove if align-items: center works well */
+      }
+
+      .contact-details p {
+          margin: 0; /* Remove default paragraph margins */
       }
 
       .contact-details p strong {
@@ -373,7 +378,6 @@
         <a href="contact.html">CONTACT US</a>
       </div>
       <div class="logo-section">
-        <!-- Placeholder for image1.png -->
         <img class="logo-img" src="/Website/pics/image1.png" alt="Mr Beans Logo" />
         <div class="logo-text">Mr Beans</div>
       </div>
@@ -456,7 +460,7 @@
         <div class="footer-section">
           <h4>Opening Hours</h4>
           <ul>
-            <li>Mon - Fry - <strong>8AM - 8PM</strong></li>
+            <li>Mon - Fri - <strong>8AM - 8PM</strong></li>
             <li>Saturday - <strong>8AM - 4PM</strong></li>
             <li>Sunday - <strong>8AM - 2PM</strong></li>
           </ul>
